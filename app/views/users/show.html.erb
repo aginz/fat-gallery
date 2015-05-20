@@ -15,5 +15,12 @@
   <%= @user.bio %>
 </p>
 
+<h1>Arts Work</h3>
+	<% @user.arts.each do |art| %>
+		<p>
+			<%= art.title %>
+		</p>
+	<% end %>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
