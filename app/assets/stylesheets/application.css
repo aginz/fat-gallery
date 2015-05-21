@@ -80,6 +80,19 @@ input[type=submit] {
 	width: 80%;
 }
 
+#titlediv {
+  background-color: #272727;
+  height: auto;
+  text-align: center;
+  width: 80%;
+  margin: 10px auto;
+}
+
+#titlediv h1 {
+  color: white;
+  padding: 10px;
+}
+
 /*Image Styles*/
 
 #headerlogo {
@@ -87,6 +100,10 @@ input[type=submit] {
 }
 
 /*Font Styles*/
+
+h2 {
+  margin-bottom: 0px;
+}
 
 #navbar h4 {
     

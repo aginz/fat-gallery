@@ -26,6 +26,7 @@ class ArtsController < ApplicationController
   # POST /arts.json
   def create
     @art = Art.new(art_params)
+    @art.user_id = current_user.id
 
     respond_to do |format|
       if @art.save

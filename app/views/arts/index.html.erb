@@ -1,21 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div id="pagediv">
+  <p id="notice"><%= notice %></p>
 
-<h1>Gallery</h1>
+  <div id="titlediv">
+    <h1>GALLERY</h1>
+  </div>
 
-<table>
-  <tbody>
-    <% @arts.each do |art| %>
-      <tr>
-        <%= art.title %><br>
-        
-        <%= link_to (image_tag art.artpic.url(:medium)), art %>
-        <%#= link_to 'Edit', edit_art_path(art) %>
-        <%#= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div id="gallerycontent">
+    
 
-<br>
 
-<%#= link_to 'New Art', new_art_path %>
+        <% @arts.each do |art| %>
+          <div class="artpic_div">
+            <h2><%= link_to (art.title), art %></h2><br>
+            <%= link_to (image_tag art.artpic.url(:medium)), art %>
+            <%#= link_to 'Edit', edit_art_path(art) %>
+            <%#= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        <% end %>
+
+  <%#= link_to 'New Art', new_art_path %>
+  </div>
+</div>
