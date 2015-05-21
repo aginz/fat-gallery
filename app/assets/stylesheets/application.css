@@ -82,7 +82,7 @@ header {
 }
 
 input[type=submit] {
-	font-size: 20px;
+	font-size: 1em;
   cursor: pointer;
   margin: 5px;
 }
@@ -123,12 +123,20 @@ input[type=submit] {
   text-align: center;
 }
 
+#reviews {
+  margin: 2px 40px 2px 40px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 
 
 .artpic_div {
   width: auto;
-  display: inline-block;
+  text-align: center;
   margin: 5px auto;
+  display: inline-block;
 }
 
 .profilepicture {
@@ -148,9 +156,31 @@ input[type=submit] {
 #noticediv {
   text-align: center;
   width: 50%;
-  margin: auto;
+  margin: 2px auto 0px auto;
   background-color: white;
   border-radius: 5px;
+}
+
+#mainartdiv {
+  text-align: center;
+  /*clear: both;*/
+}
+
+#mainartdiv img {
+  border: 2px solid black;
+}
+
+.commentdiv {
+  text-align: center;
+  clear: both;
+}
+
+.commentdiv textarea {
+  width: 60%;
+}
+
+.commentdiv input[type=submit] {
+  margin-top: 0px;
 }
 
 /*Image Styles*/
@@ -166,6 +196,10 @@ input[type=submit] {
 
 /*Font Styles*/
 
+.break {
+    border-bottom: 1px solid black;
+}
+
 h2 {
   margin-bottom: 0px;
 }
@@ -180,6 +214,10 @@ h3 {
     margin: 5px 20% 5px 20%;
     font-size: 1.2em;
     
+}
+
+.commenttitle {
+  margin-left: 40px;
 }
 
 #navbar a, #navbar a:visited a:active {

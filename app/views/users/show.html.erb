@@ -26,10 +26,10 @@
     	<% @user.arts.each do |art| %>
     			<div class="artpic_div">
             <h2><%= link_to (art.title), art %></h2><br>
-            <%= link_to (image_tag art.artpic.url(:medium)), art %>
+            <%= link_to (image_tag art.artpic.url(:medium)), art %><br />
             <% if user_signed_in? && @user.id == current_user.id %>
               <%= link_to 'Edit', edit_art_path(art) %>
-              <%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'Delete', art, method: :delete, data: { confirm: 'Are you sure?' } %>
             <% end %>
           </div>
     	<% end %>

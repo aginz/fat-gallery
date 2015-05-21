@@ -1,27 +1,30 @@
+<div id="pagediv">
+
+	<div id="titlediv">
+  	<h1><%= @art.title %></h1>
+	</div>
+
+	<div id="mainartdiv">
+	  <%= image_tag @art.artpic.url(:medium) %>
+	</div>
+
+	<div id="sm_titlediv">
+		<h3>Comments</h3>
+	</div>
+	<div id="reviews">
+		<% @art.comments.order(created_at: :desc).each do |review| %>
+			<p>
+				<%= review.comment %>
+				<div class="break"></div>
+			</p>
+		<% end %>
+	</div>
+
+	<div class="commentdiv">
+		<%= render 'comments/form' %>
+	</div>
 
 
-<p>
-  <strong>Title:</strong>
-  <%= @art.title %>
-</p>
-
-<p>
-  <%= image_tag @art.artpic.url(:medium) %>
-</p>
-
-<h3>Reviews</h3>
-
-<div id="reviews">
-<% @art.comments.each do |review| %>
-<p>
-<%= review.comment %>
-</p>
-<% end %>
+	<%#= link_to 'Edit', edit_art_path(@art) %>
+	<%#= link_to 'Back', arts_path %>
 </div>
-
-<h1>New Comment</h1>
-
-<%= render 'comments/form' %>
-
-<%#= link_to 'Edit', edit_art_path(@art) %>
-<%#= link_to 'Back', arts_path %>

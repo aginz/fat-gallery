@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :comment %><br>
-    <%= f.text_area :comment %>
+    <% f.label :comment %><br>
+    <%= f.text_area :comment, placeholder: "Add a new comment." %>
   </div>
 
   <% if @art.nil? %>
