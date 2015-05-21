@@ -16,6 +16,7 @@
 
 body {
   background-image: url('/images/background.png');
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
 	font-family: 'Roboto', sans-serif;
@@ -26,7 +27,7 @@ body {
 #pagediv {
   max-width: 800px;
   margin: auto;
-  background-color: rgba( 255, 255, 255, 0.7 );
+  background-color: rgba( 255, 255, 255, 1 );
   border-radius: 10px;
 }
 
@@ -42,7 +43,7 @@ body {
 
 header {
     background-color: #666;
-    background-color: rgba( 114, 114, 114, 0.9 );
+    background-color: rgba( 114, 114, 114, .9 );
     min-width: 101%;
     position: fixed;
     top: 0px;
@@ -176,6 +177,10 @@ input[type=submit] {
 }
 
 .commentdiv textarea {
+  width: 60%;
+}
+
+#gallerycontent textarea {
   width: 60%;
 }
 
