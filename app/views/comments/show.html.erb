@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @comment.comment %>
+</p>
+
+<p>
+  <strong>Art:</strong>
+  <%= @comment.art %>
+</p>
+
+<p>
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<% if @comment.art.nil? %>
+
+<%= link_to 'Back', comment_path %>
+
+<% else %>
+
+<%= link_to 'Back', @comment.art %>
+
+<% end %>
