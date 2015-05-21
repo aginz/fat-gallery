@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'aws-sdk', '<2.0' # S3 API
+gem 's3_direct_upload' # direct upload form helper and assets
+gem 'dotenv-rails', :groups => [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
