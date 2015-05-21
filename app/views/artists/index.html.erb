@@ -1,5 +1,13 @@
+<div id="pagediv">
 
-    <% @users.each do |user| %>
-        <%= user.name %>
-        <%= link_to 'Show', user %>
-    <% end %>
+	<div id="titlediv">
+    <h1>ARTISTS</h1>
+  </div>
+	
+	<div id="gallerycontent">
+	  <% @users.each do |user| %>
+	      <%= link_to (image_tag user.avatar.url(:thumb)), user %>
+	      <h3><%= link_to user.name, user %></h3>
+	  <% end %>
+  </div>
+</div>

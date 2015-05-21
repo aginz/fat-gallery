@@ -19,13 +19,20 @@
   <%= @user.bio %>
 </p>
 
+<% if user_signed_in? && @user.id == current_user.id %>
+  <%= link_to 'Edit my profile.', edit_user_path(@user) %>
+<% end %>
+
 <h1>Arts Work</h3>
 	<% @user.arts.each do |art| %>
-		<p>
-			<%= art.title %>
-      <%=art.artpic_file_name%>
-    </p>
+			<div class="artpic_div">
+        <h2><%= link_to (art.title), art %></h2><br>
+        <%= link_to (image_tag art.artpic.url(:medium)), art %>
+        <% if user_signed_in? && @user.id == current_user.id %>
+          <%= link_to 'Edit', edit_art_path(art) %>
+          <%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      </div>
 	<% end %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%#= link_to 'Back', users_path %>

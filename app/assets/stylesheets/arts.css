@@ -2,13 +2,3 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
-
-#gallerycontent {
-	text-align: center;
-}
-
-.artpic_div {
-  width: auto;
-  display: inline-block;
-  margin: 5px auto;
-}

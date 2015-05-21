@@ -20,6 +20,11 @@ body {
 
 /*Page Sections*/
 
+#pagediv {
+  max-width: 800px;
+  margin: auto;
+}
+
 #navbar {
     background-color: #272727;
     min-width: 101%;
@@ -93,9 +98,21 @@ input[type=submit] {
   padding: 10px;
 }
 
+#gallerycontent {
+  text-align: center;
+}
+
+
+
+.artpic_div {
+  width: auto;
+  display: inline-block;
+  margin: 5px auto;
+}
+
 /*Image Styles*/
 
-#headerlogo {
+#header img {
     margin-left: 0px;   
 }
 
@@ -103,6 +120,10 @@ input[type=submit] {
 
 h2 {
   margin-bottom: 0px;
+}
+
+h3 {
+  margin: 5px auto 5px auto;
 }
 
 #navbar h4 {
