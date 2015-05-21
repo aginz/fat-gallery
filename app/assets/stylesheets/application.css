@@ -15,6 +15,9 @@
  */
 
 body {
+  background-image: url('/images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -23,6 +26,8 @@ body {
 #pagediv {
   max-width: 800px;
   margin: auto;
+  background-color: rgba( 255, 255, 255, 0.7 );
+  border-radius: 10px;
 }
 
 #navbar {
@@ -37,7 +42,7 @@ body {
 
 header {
     background-color: #666;
-    background-color: rgba( 114, 114, 114, 0.6 );
+    background-color: rgba( 114, 114, 114, 0.9 );
     min-width: 101%;
     position: fixed;
     top: 0px;
@@ -51,6 +56,7 @@ header {
     width: 50%;
     margin-left: 20px;
     padding-top: 5px;
+    word-spacing: 20px;
 
 }
 
@@ -89,8 +95,23 @@ input[type=submit] {
   background-color: #272727;
   height: auto;
   text-align: center;
-  width: 80%;
+  /*width: 80%;*/
   margin: 10px auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#sm_titlediv {
+  background-color: #272727;
+  height: auto;
+  text-align: center;
+  /*width: 80%;*/
+  margin: 10px auto;
+}
+
+#sm_titlediv h3 {
+  color: white;
+  padding: 3px;
 }
 
 #titlediv h1 {
@@ -110,9 +131,36 @@ input[type=submit] {
   margin: 5px auto;
 }
 
+.profilepicture {
+  margin: 0px 30px 10px 30px;
+  float: left;
+}
+
+.profileinfo {
+  float: left;
+}
+
+.artistwork {
+  clear: both;
+  text-align: center;
+}
+
+#noticediv {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
 /*Image Styles*/
 
+#gallerycontent img {
+  border: 1px solid black;
+}
+
 #header img {
+    border: none;
     margin-left: 0px;   
 }
 
@@ -138,10 +186,20 @@ h3 {
 		text-decoration: none;
     color: #fff;
     font-size: 20px;
-    /*margin: 5px 20% 5px 20%;*/
+    margin: 5px 20px 5px 20px;
     
 }
 
 #navbar a:hover {
 		color: #ff6600;
 }
+
+a, a:visited {
+  color: #000;
+}
+
+a:hover {
+  color: #CD2626;
+  background-color: inherit;
+}
+

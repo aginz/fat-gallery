@@ -1,0 +1,22 @@
+<div id="pagediv">
+
+  <div id="titlediv">
+    <h1>LATEST ART</h1>
+  </div>
+
+  <div id="gallerycontent">
+    
+
+
+        <% @arts.order(created_at: :desc).limit(10).each do |art| %>
+          <div class="artpic_div">
+            <!-- <h2><%= link_to (art.title), art %></h2><br> -->
+            <%= link_to (image_tag art.artpic.url(:medium)), art %>
+            <%#= link_to 'Edit', edit_art_path(art) %>
+            <%#= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        <% end %>
+
+  <%#= link_to 'New Art', new_art_path %>
+  </div>
+</div>

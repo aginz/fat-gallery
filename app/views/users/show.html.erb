@@ -1,38 +1,40 @@
-<p id="notice"><%= notice %></p>
+<div id="pagediv">
+  
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+  <div id="titlediv">
+  <h1><%= @user.name %></h1>
+  </div>
 
-<p>
-  <%= image_tag @user.avatar.url(:medium) %>
-</p>
+  <div class="profilepicture">
+    <%= image_tag @user.avatar.url(:medium) %>
+  </div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <div class="profileinfo">
+    <strong>Email:</strong><br />
+    <%= @user.email %><br /><br />
+    <strong>Bio:</strong><br />
+    <%= @user.bio %>
+  </div>
 
-<p>
-  <strong>Bio:</strong>
-  <%= @user.bio %>
-</p>
+  <div class="artistwork">
+    <% if user_signed_in? && @user.id == current_user.id %>
+      <%= link_to 'Edit my profile.', edit_user_path(@user) %>
+    <% end %>
+    <div id="sm_titlediv">
+      <h3>Works</h3>
+    </div> 
+    	<% @user.arts.each do |art| %>
+    			<div class="artpic_div">
+            <h2><%= link_to (art.title), art %></h2><br>
+            <%= link_to (image_tag art.artpic.url(:medium)), art %>
+            <% if user_signed_in? && @user.id == current_user.id %>
+              <%= link_to 'Edit', edit_art_path(art) %>
+              <%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+          </div>
+    	<% end %>
 
-<% if user_signed_in? && @user.id == current_user.id %>
-  <%= link_to 'Edit my profile.', edit_user_path(@user) %>
-<% end %>
+    </div>
 
-<h1>Arts Work</h3>
-	<% @user.arts.each do |art| %>
-			<div class="artpic_div">
-        <h2><%= link_to (art.title), art %></h2><br>
-        <%= link_to (image_tag art.artpic.url(:medium)), art %>
-        <% if user_signed_in? && @user.id == current_user.id %>
-          <%= link_to 'Edit', edit_art_path(art) %>
-          <%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %>
-      </div>
-	<% end %>
-
-<%#= link_to 'Back', users_path %>
+  <%#= link_to 'Back', users_path %>
+</div>
