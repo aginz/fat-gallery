@@ -13,3 +13,75 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+/*Page Sections*/
+
+#navbar {
+    background-color: #272727;
+    min-width: 101%;
+    position: fixed;
+    top: 104px;
+    left: -2px;
+    height: auto;
+    z-index: 1000;
+}
+
+header {
+    background-color: #666;
+    background-color: rgba( 114, 114, 114, 0.6 );
+    min-width: 101%;
+    position: fixed;
+    top: 0px;
+    left: -2px;
+    height: 104px;
+    z-index: 1000;
+}
+
+#navleft {
+    float: left;
+    width: 50%;
+
+}
+
+#navright {
+    float: right;
+    margin-right: 80px;
+    padding-top: 5px;
+}    
+
+
+#clearheader {
+		margin-top: 200px;
+}
+
+/*Image Styles*/
+
+#headerlogo {
+    margin-left: 0px;   
+}
+
+/*Font Styles*/
+
+#navbar h4 {
+    
+    color: #fff;
+    margin: 5px 20% 5px 20%;
+    font-size: 1.2em;
+    
+}
+
+#navbar a, #navbar a:visited {
+		text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    margin: 5px 20% 5px 20%;
+    
+}
+
+#navbar a:hover {
+		color: #ff6600;
+}

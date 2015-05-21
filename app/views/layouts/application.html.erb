@@ -2,20 +2,43 @@
 <html>
 <head>
   <title>Gallery</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<div>
-<% if user_signed_in? %>
-    Signed in as <%=current_user.email %>. Not you?
-    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
-  <% end %>
+<body>
+<header>
+  <img id="headerlogo" src="../images/fatgallery_logo.png" alt="FATGallery">
+</header>
+
+<div id="navbar">
+
+    <div id="navleft">
+        <h4>HOME GALLERY ARTISTS</h4>
+    </div>
+
+    <div id="navright">
+    			
+					<% if user_signed_in? %>
+					    Signed in as <%=current_user.email %>. Not you?
+					    <%= link_to "LOGOUT", destroy_user_session_path, :method => :delete %>
+					  <% else %>
+					    <%#= link_to "Sign up", new_user_registration_path %>
+					    <%= link_to "LOGIN", new_user_session_path %>
+					  <% end %>
+					
+
+    </div>
+
 </div>
+
+<div id="clearheader"></div>
+
+
+
+
 
 <%= yield %>
 
