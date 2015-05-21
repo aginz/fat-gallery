@@ -22,7 +22,8 @@
     <div id="navright">
     			
 					<% if user_signed_in? %>
-					    Signed in as <%=current_user.email %>. Not you?
+					    <%= link_to "POST NEW", new_art_path %>
+              <%= link_to "MY PROFILE", user_path(current_user) %>
 					    <%= link_to "LOGOUT", destroy_user_session_path, :method => :delete %>
 					  <% else %>
 					    <%= link_to "LOGIN", new_user_session_path %>
@@ -34,7 +35,7 @@
 </div>
 
 <div id="clearheader"></div>
-
+<div id="noticediv"><h3><%= notice %></h3></div>
 
 
 
