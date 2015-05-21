@@ -44,6 +44,8 @@ header {
 #navleft {
     float: left;
     width: 50%;
+    margin-left: 20px;
+    padding-top: 5px;
 
 }
 
@@ -69,10 +71,9 @@ header {
 }
 
 input[type=submit] {
-	font-size: 4em;
+	font-size: 20px;
   cursor: pointer;
   margin: 5px;
-  width: 80px;
 }
 
 .form_field input {
@@ -98,8 +99,8 @@ input[type=submit] {
 #navbar a, #navbar a:visited a:active {
 		text-decoration: none;
     color: #fff;
-    font-size: 1.2em;
-    margin: 5px 20% 5px 20%;
+    font-size: 20px;
+    /*margin: 5px 20% 5px 20%;*/
     
 }
 
