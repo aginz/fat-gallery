@@ -23,7 +23,8 @@
 	<% @user.arts.each do |art| %>
 		<p>
 			<%= art.title %>
-		</p>
+      <%=art.artpic_file_name%>
+    </p>
 	<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
