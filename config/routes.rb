@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :arts
   resources :users
+  resources :artists
 
   root to: "home#index"
 
