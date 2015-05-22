@@ -3,7 +3,7 @@ class Art < ActiveRecord::Base
   has_many :comments
 
   has_attached_file :artpic, :styles => { :medium => "300x300>", :thumb => "100x100>" }, 
-                             :default_url => "",
+                             :default_url => "Add_art_pic.png",
                              :storage => :s3,
                              :s3_credentials => Proc.new{ |a| a.instance.s3_credentials }
 

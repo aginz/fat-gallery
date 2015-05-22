@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_many :arts
   
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, 
-                             :default_url => "",
+                             :default_url => "Add_Profile_Picture.png",
                              :storage => :s3,
                              :s3_credentials => Proc.new{ |a| a.instance.s3_credentials }
 
