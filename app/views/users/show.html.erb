@@ -21,12 +21,12 @@
       <%= link_to 'Edit my profile.', edit_user_path(@user) %>
     <% end %>
     <div id="sm_titlediv">
-      <h3>Works</h3>
+      <h1>Showcase</h1>
     </div> 
     	<% @user.arts.each do |art| %>
     			<div class="artpic_div">
-            <h2><%= link_to (art.title), art %></h2><br>
             <%= link_to (image_tag art.artpic.url(:medium)), art %><br />
+            <h2><%= link_to (art.title), art %></h2>
             <% if user_signed_in? && @user.id == current_user.id %>
               <%= link_to 'Edit', edit_art_path(art) %>
               <%= link_to 'Delete', art, method: :delete, data: { confirm: 'Are you sure?' } %>

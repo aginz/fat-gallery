@@ -24,10 +24,18 @@ body {
 
 /*Page Sections*/
 
+input[type=text] {
+  width: 40%;
+  border: none;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0);
+  border-bottom: 2px solid black;
+}
+
 #pagediv {
-  max-width: 800px;
   margin: auto;
-  background-color: rgba( 255, 255, 255, 1 );
+  padding: 20px;
+  /*background-color: rgba( 255, 255, 255, 1 );*/
   border-radius: 10px;
 }
 
@@ -78,46 +86,59 @@ header {
   text-align: center;
   /* border: solid rgb(39,39,39) 2px; */
   border-radius: 5px;
-  background-color: rgb(247, 255, 212);
+  background-color: rgba(255, 102, 0, .8);
   padding: 5px 30px 20px 30px;
 }
 
 input[type=submit] {
-	font-size: 1em;
+	font-size: 16px;
   cursor: pointer;
   margin: 5px;
+  
 }
 
+
 .form_field input {
-	width: 80%;
+	width: 70%;
+  border: none;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0);
+  border-bottom: 2px solid black;
 }
 
 #titlediv {
-  background-color: #272727;
+  /*background-color: #272727;*/
   height: auto;
   text-align: center;
-  /*width: 80%;*/
+  max-width: 800px;
   margin: 10px auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  /*border-top-left-radius: 10px;
+  border-top-right-radius: 10px;*/
+  border-bottom: 2px solid #000;
+  margin-bottom: 30px;
 }
 
 #sm_titlediv {
-  background-color: #272727;
+  /*background-color: #272727;*/
+  max-width: 800px;
   height: auto;
   text-align: center;
   /*width: 80%;*/
   margin: 10px auto;
+  border-bottom: 2px solid black;
 }
 
 #sm_titlediv h3 {
-  color: white;
+  color: black;
   padding: 3px;
 }
 
 #titlediv h1 {
-  color: white;
-  padding: 10px;
+  color: black;
+}
+
+.profileinfo {
+  font-size: 17px;
 }
 
 #gallerycontent {
@@ -125,19 +146,31 @@ input[type=submit] {
 }
 
 #reviews {
-  margin: 2px 40px 2px 40px;
-  background-color: white;
+  margin: auto;
+  max-width: 700px;
   padding: 10px;
-  border-radius: 5px;
 }
 
-
+#reviews p {
+  font-size: 16px;
+}
 
 .artpic_div {
   width: auto;
   text-align: center;
-  margin: 5px auto;
+  margin: 10px;
   display: inline-block;
+}
+
+.artpic_div img {
+  width: 150px;
+  height: 150px;
+}
+
+.big img {
+  width: auto;
+  height: auto;
+  vertical-align: top;
 }
 
 .profilepicture {
@@ -147,11 +180,13 @@ input[type=submit] {
 
 .profileinfo {
   float: left;
+  max-width: 50%;
 }
 
 .artistwork {
   clear: both;
   text-align: center;
+  padding-top: 30px;
 }
 
 #noticediv {
@@ -177,7 +212,8 @@ input[type=submit] {
 }
 
 .commentdiv textarea {
-  width: 60%;
+  width: 600px;
+  height: 80px;
 }
 
 #gallerycontent textarea {
@@ -239,6 +275,7 @@ h3 {
 
 a, a:visited {
   color: #000;
+  text-decoration: none;
 }
 
 a:hover {

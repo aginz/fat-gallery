@@ -6,8 +6,10 @@
 	
 	<div id="gallerycontent">
 	  <% @users.each do |user| %>
+      <div class="artpic_div">
 	      <%= link_to (image_tag user.avatar.url(:thumb)), user %>
 	      <h3><%= link_to user.name, user %></h3>
+      </div>
 	  <% end %>
   </div>
 </div>

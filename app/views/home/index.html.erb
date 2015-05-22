@@ -1,15 +1,16 @@
-<div id="pagediv">
-
-  <div id="titlediv">
+<div id="titlediv">
     <h1>LATEST ART</h1>
   </div>
+<div id="pagediv">
+
+  
 
   <div id="gallerycontent">
     
 
 
         <% @arts.order(created_at: :desc).limit(10).each do |art| %>
-          <div class="artpic_div">
+          <div class="artpic_div big">
             <!-- <h2><%= link_to (art.title), art %></h2><br> -->
             <%= link_to (image_tag art.artpic.url(:medium)), art %>
             <%#= link_to 'Edit', edit_art_path(art) %>
