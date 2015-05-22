@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require owl.carousel
+ *= require owl.theme
  */
 
 body {
@@ -77,7 +79,7 @@ header {
 
 
 #clearheader {
-		margin-top: 200px;
+		margin-top: 120px;
 }
 
 .formdiv {
