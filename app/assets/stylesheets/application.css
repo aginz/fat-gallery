@@ -279,7 +279,11 @@ a, a:visited {
 }
 
 a:hover {
-  color: #CD2626;
-  background-color: inherit;
+  color: #ff6600;
+  background-color: rgba(0,0,0,0);
+}
+
+.formdiv a:hover {
+  color: white;
 }
 
